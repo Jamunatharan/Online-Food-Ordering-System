@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="index.master.cs" Inherits="RestaurantMasterPage" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <title>Golden Palace</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/bootstrap-multiselect.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="responsive-nav.css">
+    <script src="responsive-nav.js"></script>
+    <script src="js/myScript.js"></script>
+    <link rel="stylesheet" href="StyleSheets/StyleSheetMaster.css" type="text/css" />
+</head>
+   
+<body style="height: auto;" class="mainbackground">    
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <form id="form1" runat="server">
+        <div id="mainHome">
+            <div class="headerMain">
+                <div class="shopBasketC"><a href="Viewcart.aspx"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;£<asp:Label runat="server" ID="shoppingcartprice" Text=""></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;<div style="width: 35px; background-color: darkcyan; display: inline-block; font-family: 'Axure Handwriting';">
+                    <asp:Label runat="server" CssClass="iteminbasket" Font-Size="20px" ID="shoppingcartitem" Text=""></asp:Label></div>
+                </a></div>
+            <div class="banner" align="center">
+                <div class="banner1">
+                   <a href="Home.aspx" class="logoLink"> Golden Palace</a> 
+                </div>
+                <div align="right" class="headermenu">
+                    <asp:Label ID="LblLoginUser" runat="server"></asp:Label>
+                    <div class="BtnRegisterDiv"><a href="Login.aspx" id="loginid" runat="server" class="BtnRegister">LOGIN</a></div>
+                    <div class="BtnRegisterDiv"><a href="Registration.aspx" id="signupid" runat="server" class="BtnRegister">SIGN UP</a></div>
+                    <div class="BtnRegisterDiv"><asp:LinkButton runat="server" ID="logoutid" class="BtnRegister" OnClick="logoutid_Click" CausesValidation="False">LOGOUT</asp:LinkButton></div>
+                </div>
+            </div>
+                
+            <div class="topnav" id="myTopnav">
+                
+                <a href="Home.aspx" onclick="myFunction()" runat="server">HOME</a>
+                <a href="#menu" onclick="myFunction()">MENU</a>
+                <a href="Mainmenu.aspx">ORDER</a>
+                <a href="#contact" onclick="myFunction()">CONTACT</a>
+                <a href="#about" onclick="myFunction()">ABOUT</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>                 
+               
+            </div>  
+            </div>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+    </form>
+   
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/myScript.js"></script>
+</body>
+</html>
