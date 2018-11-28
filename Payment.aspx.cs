@@ -11,7 +11,7 @@ using System.Net.Mail;
 
 public partial class Payment : System.Web.UI.Page
 {
-    SqlConnection conn = new SqlConnection(@"Data Source=restaurantkaran.database.windows.net;Initial Catalog=Restaurant;User ID=restaurantkaran;Password=musebh9H;");
+    SqlConnection conn = new SqlConnection(@"Data Source=restaurantkaran.database.windows.net;Initial Catalog=Restaurant;User ID=restaurantkaran;Password=*******;");
     //SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RestaurantConnectionString"].ConnectionString);
     string order = "";
     string OrderID;
@@ -115,7 +115,7 @@ public partial class Payment : System.Web.UI.Page
             mail.IsBodyHtml = true;
             mail.Priority = MailPriority.High;
             SmtpClient client = new SmtpClient();
-            client.Credentials = new System.Net.NetworkCredential("jamunatharan@gmail.com", "musebh9Hj");
+            client.Credentials = new System.Net.NetworkCredential("jamunatharan@gmail.com", "********");
             client.Port = 587;
             client.Host = "smtp.gmail.com";
             client.EnableSsl = true;
@@ -149,7 +149,7 @@ public partial class Payment : System.Web.UI.Page
             mail.IsBodyHtml = true;
             mail.Priority = MailPriority.High;
             SmtpClient client = new SmtpClient();
-            client.Credentials = new System.Net.NetworkCredential("jamunatharan@gmail.com", "musebh9Hj");
+            client.Credentials = new System.Net.NetworkCredential("jamunatharan@gmail.com", "********");
             client.Port = 587;
             client.Host = "smtp.gmail.com";
             client.EnableSsl = true;
