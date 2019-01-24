@@ -12,7 +12,7 @@ public partial class Manageproduct : System.Web.UI.Page
 {   
     
     String a, b;
-    SqlConnection conn = new SqlConnection(@"Data Source=restaurantkaran.database.windows.net;Initial Catalog=Restaurant;User ID=restaurantkaran;Password=musebh9H;");
+  SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DB_A41AE2_Restaurant"].ConnectionString);
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -34,7 +34,7 @@ public partial class Manageproduct : System.Web.UI.Page
 
         try
         {
-            //SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RestaurantConnectionString"].ConnectionString);
+           
             a = Class1.GetRandomPassword(10).ToString();
             ImagePath.SaveAs(Request.PhysicalApplicationPath + "./images/" + a + ImagePath.FileName.ToString());
             b = "images/" + a + ImagePath.FileName.ToString();
