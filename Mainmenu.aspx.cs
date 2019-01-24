@@ -11,12 +11,7 @@ using System.Data.SqlClient;
 public partial class Mainmenu : System.Web.UI.Page
 {
     string postcode;
-    //SqlConnection conn = new SqlConnection(@"Data Source=Jamunatharan\sqlexpress;Initial Catalog=Restaurant;Integrated Security=True;Pooling=False");
-
-    // SqlConnection conn = new SqlConnection(@"Data Source=SQL6006.site4now.net;Initial Catalog=DB_A41AE2_Restaurant;User Id=DB_A41AE2_Restaurant_admin;Password=karan1983;");
-
-    SqlConnection conn = new SqlConnection(@"Data Source=restaurantkaran.database.windows.net;Initial Catalog=Restaurant;User ID=restaurantkaran;Password=musebh9H;");
-
+   SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DB_A41AE2_Restaurant"].ConnectionString);
    
     protected void Page_Load(object sender, EventArgs e)
     {
