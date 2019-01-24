@@ -11,30 +11,16 @@ public partial class Registration : System.Web.UI.Page
 
 
 {
-    SqlConnection conn = new SqlConnection(@"Data Source=restaurantkaran.database.windows.net;Initial Catalog=Restaurant;User ID=restaurantkaran;Password=musebh9H;");
+  SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DB_A41AE2_Restaurant"].ConnectionString);
 
-    protected void Page_Load(object sender, EventArgs e)
-    {
-        ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
-        //SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RestaurantConnectionString"].ConnectionString);
-        //conn.Open();
-        //string registercustomer = "select count(*) from Registration where Email='"+ regemailtxtbox.Text.Trim() + "'";
-        //SqlCommand comm = new SqlCommand(registercustomer, conn);
-        //int temp = Convert.ToInt32(comm.ExecuteScalar().ToString());
-        //if (temp==1)
-        {
-            //LablEmaiExist.Text=("Email address already exists");
-
-        }
-        //conn.Close();
-    }
+  
 
     protected void Button1_Click(object sender, EventArgs e)
     {
 
         try
         {
-            //SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RestaurantConnectionString"].ConnectionString);
+           
             {
                 conn.Open();
 
@@ -54,7 +40,7 @@ public partial class Registration : System.Web.UI.Page
                 else
                 {
                     Guid newGUID = Guid.NewGuid();
-                    //SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RestaurantConnectionString"].ConnectionString);
+                   
                     //conn.Open();
                     string insertQuery = "insert into Customer(Id,Email,Password,Name,PhoneNumber,Postcode) values(@CustomerID, @Email, @Password, @Name, @PhoneNumber, @Postcode)";
                     SqlCommand comm = new SqlCommand(insertQuery, conn);
