@@ -10,9 +10,7 @@ using System.Configuration;
 
 public partial class Checkout : System.Web.UI.Page
 {
-
-    //SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RestaurantConnectionString"].ConnectionString);
-    SqlConnection conn = new SqlConnection(@"Data Source=restaurantkaran.database.windows.net;Initial Catalog=Restaurant;User ID=restaurantkaran;Password=musebh9H;");
+SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DB_A41AE2_Restaurant"].ConnectionString);
 
     protected void Page_Load(object sender, EventArgs e)
     {
